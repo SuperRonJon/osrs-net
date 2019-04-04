@@ -3,11 +3,10 @@ from util.file_io import read
 
 
 class Item:
-    def __init__(self, item_id, item_name, price_data, members):
+    def __init__(self, item_id, item_name, price_data):
         self.id = item_id
         self.name = item_name
         self.price_data = price_data
-        self.members = members
 
     @staticmethod
     def _get_item_data():
@@ -32,7 +31,4 @@ class Item:
         for item in data:
             if data[item]['id'] == id_num:
                 return data[item]['name']
-
         return None
-
-
