@@ -1,4 +1,7 @@
 import json
+import os
+import osrs_net
+
 from osrs_net.util.file_io import read
 
 
@@ -10,7 +13,9 @@ class Item:
 
     @staticmethod
     def _get_item_data():
-        text = read('osrs-net/resources/items.json')
+        base_dir = os.path.dirname(osrs_net.__file__)
+        filepath = os.path.join(base_dir, 'resources', 'items.json')
+        text = read(filepath)
         return json.loads(text)
 
     @staticmethod
