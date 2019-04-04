@@ -1,5 +1,5 @@
 import json
-from util.file_io import read
+from osrs_net.util.file_io import read
 
 
 class Item:

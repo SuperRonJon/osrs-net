@@ -1,5 +1,5 @@
 import requests
-from grandexchange.item import Item
+from osrs_net.grandexchange.item import Item
 
 
 class GrandExchange:

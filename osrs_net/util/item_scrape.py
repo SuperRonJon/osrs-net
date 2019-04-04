@@ -1,7 +1,7 @@
 import requests
 import json
 
-from util.file_io import write, create_directory
+from osrs_net.util.file_io import write, create_directory
 
 
 API_URL = 'https://storage.googleapis.com/osbuddy-exchange/summary.json'
