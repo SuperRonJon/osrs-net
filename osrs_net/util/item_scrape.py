@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     default_path = os.path.join(os.path.dirname(osrs_net.__file__), 'resources', 'items.json')
-    parser.add_argument('-o', '--output_file', default='../resources/items.json',help='Path to output file')
+    parser.add_argument('-o', '--output_file', default=default_path, help='Path to output file')
     args = parser.parse_args()
 
     out_file = args.output_file
