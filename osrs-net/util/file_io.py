@@ -11,6 +11,14 @@ def write(string, filepath):
         print('Failed to write data to file: {}, error: {}'.format(filepath, e))
 
 
+def read(filepath):
+    try:
+        with open(filepath, 'r') as f:
+            return f.read()
+    except Exception as e:
+        print('Failed to read from file: {}, error: {}'.format(filepath, e))
+
+
 def create_directory(directory_path):
     try:
         os.makedirs(os.path.dirname(directory_path), exist_ok=True)
