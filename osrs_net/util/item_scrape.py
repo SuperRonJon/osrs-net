@@ -1,5 +1,7 @@
 import requests
 import json
+import os
+import osrs_net
 
 from osrs_net.util.file_io import write, create_directory
 
@@ -28,6 +30,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
+    default_path = os.path.join(os.path.dirname(osrs_net.__file__), 'resources', 'items.json')
     parser.add_argument('-o', '--output_file', default='../resources/items.json',help='Path to output file')
     args = parser.parse_args()
 
