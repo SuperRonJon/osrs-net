@@ -28,7 +28,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('output_file', help='Path to output file')
+    parser.add_argument('-o', '--output_file', default='../resources/items.json',help='Path to output file')
     args = parser.parse_args()
 
     out_file = args.output_file
