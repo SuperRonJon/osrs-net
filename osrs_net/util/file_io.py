@@ -1,4 +1,6 @@
 import os
+import sys
+import osrs_net
 
 
 def write(string, filepath):
@@ -24,3 +26,12 @@ def create_directory(directory_path):
         os.makedirs(os.path.dirname(directory_path), exist_ok=True)
     except Exception as e:
         print('Failed to create directory: {}, error: {}'.format(directory_path, e))
+
+
+def get_base_dir():
+    try:
+        base_dir = sys._MEIPASS
+    except AttributeError:
+        base_dir = os.path.dirname(osrs_net.__file__)
+
+    return base_dir
