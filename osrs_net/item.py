@@ -1,6 +1,5 @@
 import json
 import os
-import osrs_net
 
 from osrs_net.util.file_io import read, get_base_dir
 
@@ -19,16 +18,21 @@ class Item:
         return json.loads(text)
 
     @staticmethod
-    def get_ids(name):
+    def item_id(name):
         item_data = Item._get_item_data()
         try:
             return item_data[name.lower()]['id']
         except KeyError:
-            matches = []
-            for item in item_data:
-                if name in item:
-                    matches.append(item_data[item]['id'])
-            return matches
+            return None
+
+    @staticmethod
+    def search_items(search_term):
+        item_data = Item._get_item_data()
+        matches = []
+        for item in item_data:
+            if search_term in item:
+                matches.append(item_data[item]['id'])
+        return matches
 
     @staticmethod
     def id_to_name(id_num):
