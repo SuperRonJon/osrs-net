@@ -6,6 +6,7 @@ setuptools.setup(
     author='Patrick Seute',
     author_email='patrick.seute@gmail.com',
     description='Simple OSBuddy Exchange API Wrapper',
+    url = 'https://github.com/SuperRonJon/osrs-net',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
