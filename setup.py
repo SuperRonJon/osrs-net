@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='osrs_net',
-    version='0.0.5',
+    version='0.1.0',
     author='Patrick Seute',
     author_email='patrick.seute@gmail.com',
     description='Simple OSBuddy Exchange API Wrapper',
