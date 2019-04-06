@@ -14,5 +14,6 @@ setuptools.setup(
     ],
     install_requires=[
         'requests'
-    ]
+    ],
+    package_data={'osrs_net': ['resources/items.json']}
 )
