@@ -16,7 +16,7 @@ def lookup(player_name):
     for i, skill in enumerate(skills):
         curr_text = text[i].split(',')
         rank, level, exp = curr_text
-        curr_skill = Skill(skill, level, exp, rank)
+        curr_skill = Skill(skill, int(level), int(exp), int(rank))
         player_stats[skill] = curr_skill
 
     return Account(player_name, player_stats)
