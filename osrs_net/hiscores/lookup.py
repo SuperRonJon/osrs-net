@@ -11,6 +11,8 @@ def lookup(player_name):
     player_stats = dict()
     url = f'https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player={player_name}'
     text = requests.get(url).text
+    if text[0] == '<':
+        return None
     text = text.split('\n')
 
     for i, skill in enumerate(skills):
