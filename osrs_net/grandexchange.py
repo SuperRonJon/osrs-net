@@ -43,3 +43,14 @@ class GrandExchange:
             return item_ids[item_name]
         except KeyError:
             return None
+    
+    @classmethod
+    def search_items(cls, search_term): 
+        item_ids = json.loads(read(cls.item_file_path))
+        matches = []
+        for item in item_ids:
+            if search_term in item.lower():
+                matches.append({item: item_ids[item]})
+        
+        return matches
+    
