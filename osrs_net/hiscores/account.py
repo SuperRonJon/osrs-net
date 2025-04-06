@@ -1,34 +1,34 @@
 class Account:
-    def __init__(self, username, skills):
+    def __init__(self, username, stats):
         self.name = username
-        self.skills = skills
+        self.stats = stats
 
-    def get_skill(self, skill_name):
+    def get_stat(self, stat_name):
         try:
-            return self.skills[skill_name]
+            return self.stats[stat_name.lower()]
         except KeyError:
             return None
 
     def get_total(self):
         try:
-            return self.skills['total']
+            return self.stats['total']
         except KeyError:
             return None
 
-    def get_level(self, skill_name):
+    def get_level(self, stat_name):
         try:
-            return self.skills[skill_name].level
+            return self.stats[stat_name.lower()].level
         except KeyError:
             return None
 
-    def get_xp(self, skill_name):
+    def get_xp(self, stat_name):
         try:
-            return self.skills[skill_name].experience
+            return self.stats[stat_name.lower()].experience
         except KeyError:
             return None
 
-    def get_rank(self, skill_name):
+    def get_rank(self, stat_name):
         try:
-            return self.skills[skill_name].rank
+            return self.stats[stat_name.lower()].rank
         except KeyError:
             return None

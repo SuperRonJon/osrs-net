@@ -1,1 +1,1 @@
-from .lookup import lookup
+from .lookup import lookup_player
