@@ -2,7 +2,7 @@ from enum import Enum
 
 skills_list = ['total', 'attack', 'defence', 'strength', 'hitpoints', 'ranged', 'prayer', 'magic', 'cooking', 'woodcutting',
         'fletching', 'fishing', 'firemaking', 'crafting', 'smithing', 'mining', 'herblore', 'agility', 'thieving',
-        'slayer', 'farming', 'runecraft', 'hunter', 'construction']
+        'slayer', 'farming', 'runecraft', 'hunter', 'construction', 'sailing']
 
 
 class Skill(Enum):
@@ -30,6 +30,7 @@ class Skill(Enum):
     RUNECRAFT = 'runecraft'
     HUNTER = 'hunter'
     CONSTRUCTION = 'construction'
+    SAILING = 'sailing'
 
 
     @classmethod
